@@ -1,0 +1,90 @@
+﻿* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Poppins;
+	text-align: center;
+	font-size: 18px;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* This class is added when page is scrolled */
+
+.fixed {
+	position: fixed;
+	top: 0;
+	height: 70px;
+	z-index: 1;
+}
+
+/* Navbar */
+
+nav {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 70px;
+	background: #000;
+}
+
+	nav li {
+		display: inline-block;
+		padding: 24px 40px;
+		font-size: 12px;
+		font-weight: 400;
+	}
+
+		nav li a {
+			color: #fff;
+			text-transform: uppercase;
+		}
+
+section {
+	height: 100vh;
+}
+
+#landing-page {
+	background: url(../Images/Academia.jpg) 50% 50% no-repeat;
+	background-size: cover;
+}
+
+	#landing-page h1 {
+		position: absolute;
+		top: 46%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		text-transform: uppercase;
+		letter-spacing: 20px;
+		color: #fff;
+		font-size: 18px;
+		font-weight: 700;
+	}
+
+#content {
+	background: #fff;
+}
+
+p {
+	width: 80%;
+	margin: 40px auto;
+	text-align: justify;
+	color: grey;
+	line-height: 30px;
+	font-size: 16px;
+}
+
+@media only screen and (max-width: 520px) {
+
+	nav li {
+		padding: 24px 4px;
+	}
+
+		nav li a {
+			font-size: 14px;
+		}
+}
