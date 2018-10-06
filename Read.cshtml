@@ -1,0 +1,39 @@
+﻿@using eCommerceWeb.Models.Entities
+
+@{
+    Layout = "~/Views/Shared/LayoutPage2.cshtml";
+    Cliente cli = (Cliente)Session["Cliente"];
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Read</title>
+</head>
+<body>
+    <h1 style="text-align: center">Meus Planos</h1>
+
+    <table style="margin-left: 430px; margin-top: 50px" class=" =table table-hover">
+
+        @foreach (var c in ViewBag.lista)
+        {
+            <tr style="align-items: center">
+                <td>@c.CategoriaId</td>
+                <td>@c.Nome</td>
+
+                <td style="text-align: right">
+                    <a style="margin-left: 50px" href="/categoria/delete/@c.CategoriaId" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i>Apagar</a>
+                </td>
+                <td>
+                    <a href="/categoria/update/@c.CategoriaId" class="btn btn-success btn-sm">Atualizar</a>
+                </td>
+            </tr>
+        }
+
+    </table>
+
+
+    @*<a href="/categoria/create">Adicionar</a>*@
+</body>
+</html>

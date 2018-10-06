@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Update";
+    Layout = "~/Views/Shared/LayoutPage2.cshtml";
+
+}
+
+<form action="/categoria/update" method="post">
+    <input type="hidden" name="CategoriaId" value="@ViewBag.categoria.CategoriaId" />
+
+    <div class="form-group">
+        <label>Nome</label>
+        <input type="text" name="Nome" class=" form-control" value="@ViewBag.categoria.Nome"/>
+    </div>
+
+    <button class="btn btn-success">Salvar</button>
+</form>

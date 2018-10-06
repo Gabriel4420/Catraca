@@ -1,0 +1,21 @@
+﻿
+
+@{
+    ViewBag.Title = "Cadastrar Categoria";
+    Layout = "~/Views/Shared/LayoutPage2.cshtml";
+    
+}
+
+<form style="margin-top: 50px" action="/categoria/create" method="post">
+
+    <div class="form-group">
+        <label>Nome</label>
+        <input type="text" name="Nome" />
+    </div>
+    @*<div class="form-group">
+        <label>Preço</label>
+        <input type="number" name="Preco" />
+    </div>*@
+
+    <button class="btn btn-success">Salvar</button>
+</form>
